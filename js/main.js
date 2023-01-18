@@ -69,14 +69,13 @@ function scrollToEndOfPage() {
     //console.log(document.documentElement.clientHeight);
     //console.log(document.documentElement.clientHeight + document.documentElement.scrollTop);
 
-    //zaokrąglam w górę bo mi się bugowało na ekranie lapotopa (w przeciwieństwie do monitora) - brakowało 0.2
-
+    
     if (document.documentElement.scrollHeight <= Math.ceil(document.documentElement.clientHeight + document.documentElement.scrollTop)) {
         console.log('zescrollowano na koniec strony');
         //showPreloader();
         getData();
         //hidePreloader();
-        //pytanie - dlaczego, kiedy tutaj wstawiałem funkcje w układzie show, getData, hide, to program nie działa odpowiednio (preloader w ogóle się nie wyświetla). Czy JavaScript zaczyna wykonywać te funkcje, jeszcze zanim skończy się działanie getData? 
+        //pytanie - dlaczego, kiedy tutaj wstawiałem funkcje w układzie show, getData, hide, to program nie działa odpowiednio (preloader w ogóle się nie wyświetla). Czy JavaScript zaczyna wykonywać te funkcję hide, jeszcze zanim skończy się działanie getData? 
     }
 }
 
